@@ -1,0 +1,52 @@
+--- Training Logistic Regression ---
+Accuracy: 0.7195
+F1 Score: 0.4996
+              precision    recall  f1-score   support
+           0       0.91      0.72      0.81      1607
+           1       0.38      0.71      0.50       393
+    accuracy                           0.72      2000
+   macro avg       0.65      0.72      0.65      2000
+weighted avg       0.81      0.72      0.75      2000
+
+--- Training Random Forest ---
+Accuracy: 0.8685
+F1 Score: 0.5765
+              precision    recall  f1-score   support
+           0       0.88      0.97      0.92      1607
+           1       0.79      0.46      0.58       393
+    accuracy                           0.87      2000
+   macro avg       0.83      0.71      0.75      2000
+weighted avg       0.86      0.87      0.85      2000
+
+--- Training Gradient Boosting ---
+Accuracy: 0.8675
+F1 Score: 0.5917
+              precision    recall  f1-score   support
+           0       0.88      0.96      0.92      1607
+           1       0.75      0.49      0.59       393
+    accuracy                           0.87      2000
+   macro avg       0.82      0.72      0.76      2000
+weighted avg       0.86      0.87      0.86      2000
+
+--- Hyperparameter Tuning for Random Forest ---
+Fitting 3 folds for each of 36 candidates, totalling 108 fits
+Best parameters: {'class_weight': 'balanced', 'max_depth': 10, 'min_samples_split': 5, 'n_estimators': 300}
+Accuracy: 0.8470
+F1 Score: 0.6357
+              precision    recall  f1-score   support
+           0       0.92      0.89      0.90      1607
+           1       0.60      0.68      0.64       393
+    accuracy                           0.85      2000
+   macro avg       0.76      0.78      0.77      2000
+weighted avg       0.86      0.85      0.85      2000
+
+--- Final Model Selection ---
+The best model for this project is 'Tuned Random Forest' with an F1 Score of 0.6357
+Best model saved as 'final_churn_model.pkl'
+
+Top Features for the best model (Tuned Random Forest):
+Age: 0.3275
+NumOfProducts: 0.2088
+Balance: 0.1159
+EstimatedSalary: 0.0812
+CreditScore: 0.0779
